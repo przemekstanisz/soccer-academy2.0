@@ -45,7 +45,7 @@ img {
 /* HERO SECTION */
 
 .hero {
-    height: 140vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
