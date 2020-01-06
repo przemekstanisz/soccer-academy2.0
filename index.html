@@ -8,80 +8,95 @@
     <meta name="description" content="AWorld Class Soccer Academy">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
 
-<section class="hero">
+    <header class="header">
 
-    <div class="hero__social-box">
-        <a href="https://twitter.com" target="blank"><img src="images/social-twitter.svg" alt="" class="social__icon"></a>
-        <a href="https://twitter.com" target="blank"><img src="images/social-facebook.svg" alt="" class="social__icon"></a>        
-        <a href="https://twitter.com" target="blank"><img src="images/social-instagram.svg" alt="" class="social__icon"></a>
-    </div>
+        <nav role="navigation" class="header__menu">
 
-    <div class="hero__top-left">
-
-        <header class="header">
-            <nav role="navigation" class="header__menu">
-                <label class="menu__hamburger" for="toggle">
-                    <div class="hamburger__container">
-                        <span class="hamburger__element1"></span>
-                        <span class="hamburger__element1"></span>
-                        <span class="hamburger__element2"></span>
-                        <span class="hamburger__element2"></span>
-                    </div>
-                </label>
-                <input type="checkbox" id="toggle"/>
-    
-                <ul class="menu__content"> 
-                    <a class="content__link" href="#home"><li class="content__element">home</li></a>
-                    <a class="content__link" href="#program"><li class="content__element">program</li></a>
-                    <a class="content__link" href="#about"><li class="content__element">about us</li></a>
-                    <a class="content__link" href="#teams"><li class="content__element">teams</li></a>
-                    <a class="content__link" href="#league"><li class="content__element">league</li></a>
-                    <a class="content__link" href="#coaches"><li class="content__element">coaches</li></a>
-                    <a class="content__link" href="#contact"><li class="content__element">contact</li></a>
-                </ul>  
-            </nav>
-            
-            <div class="header__title">
-                <h1 class="title__main">world class</h1>
-                <p class="title__subtitle">soccer academy</p>
-            </div>
-
-            <img src="images/logo.svg" alt="" class="header__logo mobile">
-            
-        </header>
-        <div class="hero__content">
-            <div class="content__subtitle-top">
-                <div class="top__subtitle">
-                    <p class="subtitle1">soccer&nbsp;</p>
-                    <p class="subtitle2">academy</p>
+            <label class="menu__hamburger" for="toggle">
+                <div class="hamburger__container">
+                    <span class="hamburger__element1"></span>
+                    <span class="hamburger__element1"></span>
+                    <span class="hamburger__element2"></span>
+                    <span class="hamburger__element2"></span>
                 </div>
-                <img src="images/logo.svg" alt="" class="header__logo desktop">
-            </div>
-            <div class="content__title">
-                <h2 class="title1">world&nbsp;</h2>
-                <h2 class="title2">class</h2>
-            </div>
-            <p class="content__subtitle-bottom mobile">we create stars</p>
+            </label>    
+
+            <input type="checkbox" id="toggle"/>
+    
+            <ul class="menu__content"> 
+                <a class="menu__link" href="#home"><li class="menu__element">home</li></a>
+                <a class="menu__link" href="#program"><li class="menu__element">program</li></a>
+                <a class="menu__link" href="#about"><li class="menu__element">about us</li></a>
+                <a class="menu__link" href="#teams"><li class="menu__element">teams</li></a>
+                <a class="menu__link" href="#league"><li class="menu__element">league</li></a>
+                <a class="menu__link" href="#coaches"><li class="menu__element">coaches</li></a>
+                <a class="menu__link" href="#contact"><li class="menu__element">contact</li></a>
+            </ul>
+
+        </nav>
+            
+        <div class="header__content">
+            <h1 class="header__title">world class</h1>
+            <p class="header__subtitle">soccer academy</p>
         </div>
 
-    </div>
+        <img src="images/logo.svg" alt="" class="header__logo mobile">
+            
+    </header>
 
-    <div class="hero__bottom-right">
+    <section class="hero">
 
-        <div class="hero__cta">
-            <h3 class="cta__title">we create stars</h3>
-            <p class="cta__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <div class="cta__btn">
-                <button class="btn__action">membership</button>
-                <button class="btn__more-main">learn more</button>
+        <div class="hero__top">
+            
+            <div class="hero__content">
+
+                <div class="hero__features">
+                    <h2 class="hero__title">world&nbsp;</h2>
+                    <h2 class="hero__title">class</h2>
+                </div>
+
+                <div class="hero__features">
+                    <p class="hero__subtitle">soccer&nbsp;</p>
+                    <p class="hero__subtitle">academy</p>
+                </div>
+
             </div>
+
+            <div class="hero__social-box">
+
+                <a class="hero__link" href="https://twitter.com" target="blank"><img src="images/social-twitter.svg" alt="" class="social__icon"></a>
+                <a class="hero__link" href="https://facebook.com" target="blank"><img src="images/social-facebook.svg" alt="" class="social__icon"></a>        
+                <a class="hero__link" href="https://instagram.com" target="blank"><img src="images/social-instagram.svg" alt="" class="social__icon"></a>
+
+            </div>
+
         </div>
 
-    </div>
+        <div class="hero__bottom">
 
-</section>
+            <div class="hero__cta">
+
+                <h3 class="cta__title">we create stars</h3>
+                <img src="images/cta.jpg" alt="" class="cta__img">
+                <button class="cta__btn-action">membership</button>
+                <button class="cta__btn-learn">learn more</button>
+                <p class="cta__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="partners">
+        <img src="images/partners-uefa.svg" alt="" class="partners__logo">
+        <img src="images/partners-adidas.svg" alt="" class="partners__logo">
+        <img src="images/partners-mercedes.svg" alt="" class="partners__logo">
+    </section>
     
 </body>
+
 </html>
