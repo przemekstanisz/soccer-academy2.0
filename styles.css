@@ -101,7 +101,6 @@ img {
     padding: 1rem;
     z-index: 2;
     background-color: var(--bg-secondary_text1);
-    background-image: var(--gradient-light);
     box-shadow: var(--dark-shadow);
     border-radius: 0 0 var(--standard-border-rad) var(--standard-border-rad);
 }
@@ -284,7 +283,6 @@ img {
     justify-content: flex-end;
     align-items: flex-end;
     background-color: var(--bg-secondary_text1);
-    background-image: var(--gradient-light);
     margin: -8rem 0 0 0;
     box-shadow: var(--dark-shadow);
     border-radius: 0 0 var(--standard-border-rad) var(--standard-border-rad);
@@ -297,7 +295,7 @@ img {
     background-color: var(--bg-primary_title);
     background-image: var(--gradient-dark2);
     box-shadow: var(--dark-shadow2);
-    margin: 0 auto -1rem auto;
+    margin: 0 auto 2rem auto;
     padding: 1rem;
     z-index: 1;
 }
@@ -321,13 +319,11 @@ img {
 .cta__btn-action {
     background-color: var(--button);
     color: var(--bg-secondary_text1);
-    background-image: var(--gradient-dark3);
 }
 
 .cta__btn-learn {
     background-color: var(--bg-primary_title);
     color: var(--bg-secondary_text1);
-    background-image: var(--gradient-dark2);
 }
 
 /* section partners */
@@ -369,7 +365,6 @@ img {
     text-transform: uppercase;
     background-image: var(--gradient-light);
     border-radius: var(--standard-border-rad);
-    box-shadow: var(--light-shadow);
 }
 
 .program__text {
@@ -393,6 +388,8 @@ img {
 }
 
 .panel__header {
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-secondary_text1);
     border-radius: var(--standard-border-rad);
     box-shadow: var(--dark-shadow);
@@ -433,10 +430,11 @@ img {
 
 .panel__btn {
     align-self: flex-end;
+    color: var(--bg-secondary_text1);
     margin: 0 1rem;
     width: 40%;
-    background-color: transparent;
-    border: 1px solid var(--bg-secondary_text1);
+    min-width: 150px;
+    background-color: var(--button);
 }
 
 /*=================================================================================================================
@@ -489,14 +487,14 @@ tablet
 @media (min-width: 768px) {
 
     :root {
-        --section-title-fs: 1.75rem;
+        --section-title-fs: 1.5rem;
         --section-title-fw: 600;
-        --section-title-padding: 2rem;
+        --section-title-padding: 1rem;
 
         --section-text-fs: 1rem;
         --section-text-fw: 400;
         --section-text-lh: 150%;
-        --section-text-margin: 2rem;
+        --section-text-margin: 1rem;
 
         --panel-title-fs: 1.25rem;
         --panel-title-fw: 500;
@@ -544,8 +542,8 @@ tablet
     .program__content {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding: 1rem;
+        justify-content: space-around;
+        padding: 0;
     }
 
     .program__panel {
@@ -561,6 +559,10 @@ tablet
         border-radius: var(--standard-border-rad);
     }
 
+    .panel__img {
+        height: 25vh;
+    }
+
 }
 
 /*=================================================================================================================
@@ -574,7 +576,7 @@ medium desktop
 @media (min-width: 922px) {
 
     :root {
-        --section-margin: 0 5rem;
+        --section-margin: 0 4rem;
 
         --section-title-ff: 'Permanent Marker', cursive;
         --section-title-fs: 5rem;
@@ -592,7 +594,7 @@ medium desktop
 
         --panel-title-fs: 1.25rem;
         --panel-title-fw: 500;
-        --panel-title-padding: 2rem;
+        --panel-title-margin: 0 2rem;
 
         --panel-text-fs: .9rem;
         --panel-text-fw: 500;
@@ -680,7 +682,6 @@ medium desktop
         width: 40%;
         clip-path: polygon(0 0, 100% 0, calc(100% - 8rem) 100%, 0 100%);
         background-color: var(--bg-secondary_text1);
-        background-image: var(--gradient-light);
     }
 
     .hero::after {
@@ -693,7 +694,6 @@ medium desktop
         width: 8rem;
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
         background-color: var(--bg-secondary_text1);
-        background-image: var(--gradient-light);
     }
     
     .hero__top {
@@ -701,7 +701,7 @@ medium desktop
         min-width: 40%;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: flex-start;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         background-color: transparent;
         background-image: none;
@@ -716,7 +716,8 @@ medium desktop
 
     .hero__social-box {
         flex-direction: row;
-        margin: 3rem 2.5rem 0 0;
+        margin: 3rem 2rem 0 0;
+        align-self: flex-end;
     }
     
     .social__icon {
@@ -724,45 +725,22 @@ medium desktop
     }
     
     .hero__content {
-        margin: 4rem 2rem 0 0;
+        margin: 4rem 0 0 2rem;
         position: relative;
         z-index: 1;
-    }
-
-    .hero__content::before {
-        content: '';
-        position: absolute;
-        display: block;
-        z-index: 0;
-        height: 100%;
-        width: 4rem;
-        top: 0;
-        left: -5rem;
-        background-image: linear-gradient(to right, rgba(157, 191, 4, .7), rgba(157, 191, 4, .4));
     }
     
     .hero__features {
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 1;
     }
     
     .hero__subtitle {
         font-size: 2rem;
         font-weight: 400;
         color: var(--text2);
-        position: relative;
-    }
-
-    .hero__subtitle::before {
-        content: '';
-        position: absolute;
-        display: block;
-        z-index: 0;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: -1rem;
-        background-image: linear-gradient(to right, rgba(157, 191, 4, .4), rgba(157, 191, 4, 0));
     }
     
     .hero__bottom {
@@ -791,11 +769,11 @@ medium desktop
 
     .program__features {
         border-radius: 0;
-        margin: 0;
+        margin: 0 0 4rem 0;
         padding: 0;
         box-shadow: none;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         background-color: transparent;
     }
@@ -826,31 +804,53 @@ medium desktop
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
+        width: 100%;
         padding: 0;
-        margin: 4rem auto;
+        margin: 0;
         background-color: transparent;
         box-shadow: none;
     }
 
     .program__panel {
         flex-direction: row;
+        justify-content: center;
         width: 100%;
-        max-width: 700px;
-        margin: 1rem auto;
+        margin: 1rem 0;
         padding: 0;
         border-radius: 0;
         background-color: var(--bg-primary_title);
-        box-shadow: var(--dark-shadow2);
+        box-shadow: none;
+    }
+
+    .panel--reverse {
+        flex-direction: row-reverse;
     }
 
     .panel__header {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
         border-radius: 0;
+        background-color: transparent;
+        width: 70%;
+        box-shadow: none;
+    }
+
+    .header--reverse {
+        flex-direction: row;
     }
 
     .panel__title {
         font-size: var(--panel-title-fs);
-        padding: var(--panel-title-padding);
-        text-align: center;
+        color: var(--bg-secondary_text1);
+        margin: var(--panel-title-margin);
+        border-radius: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .panel__content {
+        width: 30%;
     }
 
     .panel__text {
@@ -862,13 +862,17 @@ medium desktop
     }
 
     .panel__img {
-        width: 300px;
+        width: 200px;
+        height: 200px;
         border-radius: 0;
+        object-position: top;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     }
 
     .panel__btn {
+        align-self: center;
         width: 30%;
-        margin: 0 2rem 2rem 0;
+        margin: 0;
     }
 
 }
@@ -882,6 +886,10 @@ large desktop
 =================================================================================================================*/
 
 @media (min-width: 1200px) {
+
+    .hero__content {
+        margin: 3rem 0 0 2rem;
+    }
     
     .hero__title {
         font-size: 6rem;
@@ -889,6 +897,11 @@ large desktop
     
     .hero__cta {
         width: 40%;
+    }
+
+    .panel__img {
+        width: 300px;
+        height: 300px;
     }
 
 }
